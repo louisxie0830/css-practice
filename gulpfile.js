@@ -1,23 +1,22 @@
 const gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    uglify = require('gulp-uglify');
 
 
 // service
 gulp.task('serve', ['scss'], function () {
     browserSync.init({
-        watchOptions: {
-            ignoreInitial: true,
-            ignored: '*.txt'
-        },
-        files: ['./index.html']
+        server: {
+            baseDir: './'
+        }
     });
 });
 
 // watch
 gulp.task('watch', function () {
-    gulp.watch("scss/*.scss", ['scss']);
-    gulp.watch("*.html").on('change', browserSync.reload);
+    gulp.watch("./scss/*.scss", ['scss']);
+    gulp.watch("**.html").on('change', browserSync.reload);
 });
 
 // build scss

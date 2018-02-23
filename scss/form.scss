@@ -1,0 +1,9 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+form {
+    width: 80vw;
+    margin: 20px auto;
+  }
+  .form-control {
+    color:  #495057;
+    caret-color: red;
+  }

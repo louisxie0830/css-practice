@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  padding: 2vw; }
+
+.show {
+  padding-bottom: 20px;
+  min-width: 50vw; }
+
+.show h5 {
+  font-size: 13px;
+  line-height: 20px;
+  padding: 10px 0 2px 2px;
+  margin: 0 0 0 8px; }
+
+.demo {
+  padding: 10px; }
+
+details {
+  border: 1px solid;
+  margin: 1rem 0; }
+
+details:active,
+details:focus,
+summary:active,
+summary:focus {
+  outline: none 0; }
+
+summary {
+  user-select: none;
+  outline: 0; }
+
+summary a {
+  color: inherit;
+  pointer-events: none; }
