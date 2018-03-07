@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.top {
+  height: 200px;
+  background-color: #000; }
+
+ul.bar {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #871;
+  width: 100%; }
+
+ul.bar > li {
+  flex: 1; }
+
+.bottom {
+  height: 1000px;
+  background-color: #eee; }

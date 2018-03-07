@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scaleable=none;">
+    <title>scroll test</title>
+    <link rel="stylesheet" href="../css/scrollHideNavBar.css">
+</head>
+
+<body>
+    <div class="top">視屏區</div>
+    <ul class="bar">
+        <li>bar1</li>
+        <li>bar2</li>
+    </ul>
+    <div class="bottom">內容區</div>
+    <script>
+        var barEl = document.querySelector('.bar'),
+            bottomEl = document.querySelector('.bottom'),
+            topEl = document.querySelector('.top');
+        var onScroll = (() => {
+            var timer;
+            return () => {
+                clearInterval(timer);
+                timer = setTimeout(() => {
+                    if (document.documentElement.scrollTop >= topEl.clientHeight) {
+                        barEl.style.position = 'fixed'
+                        barEl.style.top = '0'
+                        bottomEl.style.marginTop = barEl.clientHeight + 'px'
+                    } else {
+                        barEl.style.position = 'static'
+                        bottomEl.style.marginTop = '0'
+                    }
+                }, 100);
+            }
+        })();
+        document.addEventListener('scroll', onScroll, false);
+    </script>
+</body>
+
+</html>
