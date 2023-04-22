@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outside-circle {
+      width: 100px;
+      position: relative;
+      background: #e91e63;
+      border-radius: 10px 0px 10px 0px;
+
+    }
+
+    .outside-circle::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0px;
+      transform: rotate(180deg);
+      bottom: -20px;
+      background: #000;
+      background: radial-gradient(circle at 0 0, transparent 20px, #e91e63 21px);
+    }
+
+    .outside-circle::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      transform: rotate(90deg);
+      height: 20px;
+      right: -20px;
+      top: 0;
+      background: #000;
+      background: radial-gradient(circle at 100% 0, transparent 20px, #e91e63 21px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outside-circle">outside-circle</div>
+</body>
+
+</html>
