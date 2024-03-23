@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizing Native file input</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        main {
+            max-width: 1024px;
+            margin: auto;
+        }
+        
+        input[type="file"] {
+            position: relative;
+            padding: 0.9375rem;
+            color: #f0f0f0;
+            background-color: #2c2c3c;
+            border: 2px solid #3e3e56;
+            border-radius: 0.3125rem;
+            cursor: pointer;
+        }
+        
+        &::file-selector-button {
+            padding: 0.625rem 0.9375rem;
+            color: #fff;
+            background-color: var(--primary);
+            border:none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <main>
+        <input type="file" name="" id="">
+    </main>
+</body>
+</html>
